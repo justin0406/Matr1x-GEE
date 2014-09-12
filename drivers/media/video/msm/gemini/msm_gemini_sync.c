@@ -822,11 +822,7 @@ int msm_gemini_ioctl_hw_cmds(struct msm_gemini_device *pgmn_dev,
 {
 	int is_copy_to_user;
 	uint32_t len;
-<<<<<<< HEAD
-	uint32_t m,n;
-=======
 	uint32_t m;
->>>>>>> ecedb28... CAM driver port from LGE's KK kernel
 	struct msm_gemini_hw_cmds *hw_cmds_p;
 	struct msm_gemini_hw_cmd *hw_cmd_p;
 
@@ -840,13 +836,6 @@ int msm_gemini_ioctl_hw_cmds(struct msm_gemini_device *pgmn_dev,
 			 __func__, __LINE__);
 		return -EINVAL;
 	}
-
-    if ((m == 0) || (m > ((UINT32_MAX-sizeof(struct msm_gemini_hw_cmds))/
-           sizeof(struct msm_gemini_hw_cmd)))) {
-           GMN_PR_ERR("%s:%d] outof range of hwcmds\n",
-            __func__, __LINE__);
-           return -EINVAL;
-    }
 
 	len = sizeof(struct msm_gemini_hw_cmds) +
 		sizeof(struct msm_gemini_hw_cmd) * (m - 1);
@@ -1103,4 +1092,3 @@ int __msm_gemini_exit(struct msm_gemini_device *pgmn_dev)
 	kfree(pgmn_dev);
 	return 0;
 }
-

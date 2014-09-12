@@ -546,13 +546,6 @@ static int msm_mctl_cmd(struct msm_cam_media_controller *p_mctl,
 		break;
 
 	default:
-<<<<<<< HEAD
-		/* ISP config*/
-		D("%s:%d: go to default. Calling msm_isp_config\n",
-			__func__, __LINE__);
-		if ((p_mctl) && (p_mctl->isp_sdev) && (p_mctl->isp_sdev->isp_config))
-			rc = p_mctl->isp_sdev->isp_config(p_mctl, cmd, arg);
-=======
 		if(p_mctl && p_mctl->isp_config) {
 			/* ISP config*/
 			D("%s:%d: go to default. Calling msm_isp_config\n",
@@ -562,7 +555,6 @@ static int msm_mctl_cmd(struct msm_cam_media_controller *p_mctl,
 			rc = -EINVAL;
 			pr_err("%s: media controller is null\n", __func__);
 		}
->>>>>>> ecedb28... CAM driver port from LGE's KK kernel
 		break;
 	}
 	D("%s: !!! cmd = %d, rc = %d\n",

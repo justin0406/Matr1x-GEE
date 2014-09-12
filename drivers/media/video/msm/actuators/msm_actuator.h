@@ -92,8 +92,6 @@ struct msm_actuator_ctrl_t {
 	uint16_t initial_code;
 	struct msm_camera_i2c_reg_tbl *i2c_reg_tbl;
 	uint16_t i2c_tbl_index;
-<<<<<<< HEAD
-=======
 /*                                                                 */
 	uint8_t AF_defocus_enable;
 	uint16_t AF_center_best_code;
@@ -103,7 +101,6 @@ struct msm_actuator_ctrl_t {
 	uint16_t AF_LG_defocus_offset;
 	uint16_t af_status;
 /*                                                                 */
->>>>>>> ecedb28... CAM driver port from LGE's KK kernel
 };
 
 struct msm_actuator_ctrl_t *get_actrl(struct v4l2_subdev *sd);
