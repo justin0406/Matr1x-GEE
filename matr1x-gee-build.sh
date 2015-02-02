@@ -15,7 +15,7 @@ DEFCONFIG="gee_defconfig"
 
 # Kernel Details
 BASE_AK_VER="Matr1x"
-VER=".v14.5-gee"
+VER=".v14.5-stock-gee"
 AK_VER="$BASE_AK_VER$VER"
 
 # AK Variables
